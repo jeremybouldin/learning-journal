@@ -1,0 +1,45 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #151515;
+    min-width: 414px;
+}
+
+/* Typography */
+
+h3 {
+    margin: 0;
+}
+
+
+/* Navbar */
+.logo {
+    align-self: center;
+    margin-right: 3px;
+}
+
+.logo-text {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    margin: 1.125em 1.5em 1.125em 1.25em;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    margin: 0 0 0 auto;
+    font-size: .75rem;
+    line-height: 1em;
+    gap: 30px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: #090909;
+}
