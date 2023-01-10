@@ -1,12 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Source Sans Pro', sans-serif;
     color: #151515;
-    min-width: 414px;
+    /* min-width: 414px; */
+    margin: 0;
 }
 
 /* Typography */
 
-h3 {
+h1, 
+h2, 
+h3,
+h4,
+h4,
+h6,
+p {
     margin: 0;
 }
 
@@ -29,7 +40,7 @@ nav{
     margin: 1.125em 1.5em 1.125em 1.25em;
 }
 
-ul{
+nav > ul{
     list-style: none;
     display: flex;
     margin: 0 0 0 auto;
@@ -43,3 +54,91 @@ a{
     text-decoration: none;
     color: #090909;
 }
+
+/* Layout */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 20px;
+}
+
+.wrapper > * {
+    grid-column: col-start / span 12;
+}
+
+.post-list {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 2.6em;
+}
+
+.post-list > * {
+    list-style: none;
+    grid-column: col-start /span 12;
+}
+
+.post {
+    gap: 50px;
+}
+
+.post-date {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.post-blurb {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+
+/* .hero-post {
+    background-position: center center;
+    background-attachment: fixed;
+    min-width: 320px;
+    min-height: 293px;
+    margin: 0 auto;
+    background-size: cover;
+    color: #fff;
+    padding: 1.25em;
+    display: grid;
+    grid-template-rows: minmax(87px, 287px) 1fr max-content;
+    grid-template-areas:
+        "date"
+        "title"
+        "p";
+    gap: 8px;
+    border: 1px solid black;
+}
+
+.hero-date {
+    background-color: darkcyan;
+    grid-area: date;
+    align-self: end;
+    font-size: .75rem;
+    font-weight: 400;
+}
+
+.hero-title {
+    background: darkcyan;
+    grid-area: title;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.hero-p {
+    background: darkcyan;
+    grid-area: p;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25em;
+} */
