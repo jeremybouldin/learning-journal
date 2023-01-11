@@ -5,7 +5,6 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
     color: #151515;
-    /* min-width: 414px; */
     margin: 0;
 }
 
@@ -17,7 +16,8 @@ h3,
 h4,
 h4,
 h6,
-p {
+p,
+ul {
     margin: 0;
 }
 
@@ -35,19 +35,25 @@ p {
 }
 
 nav{
+    width: 100%;
     display: flex;
     align-items: center;
-    margin: 1.125em 1.5em 1.125em 1.25em;
+    padding: 1.125em 1.5em 1.125em 1.25em;
+    justify-self: none;
 }
 
-nav > ul{
+nav ul{
     list-style: none;
     display: flex;
-    margin: 0 0 0 auto;
+    margin-left: auto;
     font-size: .75rem;
     line-height: 1em;
     gap: 30px;
     font-weight: 600;
+}
+
+.home {
+    border-bottom: 2px solid black;
 }
 
 a{
@@ -55,36 +61,70 @@ a{
     color: #090909;
 }
 
-/* Layout */
+/* Grid */
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 20px;
+    grid-template-columns: minmax(414px, 1fr);
+    justify-items: center;
 }
 
-.wrapper > * {
-    grid-column: col-start / span 12;
+/* Hero Post */
+
+.hero-post {
+    /* min-width: 320px; */
+    display: grid;
+    background: darkolivegreen url("../images/article-image-hero.png");
+    min-height: 293px;
+    margin: 0 auto;
+    background-size: cover;
+    color: #fff;
+    padding: 1.25em;
+    grid-template-rows: minmax(87px, 1fr) max-content max-content;
+    grid-template-areas:
+    "hero-date"
+    "hero-title"
+    "hero-p";
+    gap: 8px;
+    border: 1px solid black;
 }
 
-.post-list {
-    grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 2.6em;
+.hero-date {
+    grid-area: hero-date;
+    align-self: end;
+    font-size: .75rem;
+    font-weight: 400;
 }
 
-.post-list > * {
-    list-style: none;
-    grid-column: col-start /span 12;
+.hero-title {
+    grid-area: hero-title;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
 }
 
-.post {
-    gap: 50px;
+.hero-blurb {
+    grid-area: hero-p;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25em;
+}
+
+/* Posts */
+
+.posts {
+    display: grid;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    padding: 2.125em 1.25em 1.7em 1.25em;
+    row-gap: 2.56em;
 }
 
 .post-date {
     font-size: .875rem;
     font-weight: 400;
     line-height: 1rem;
+    text-transform: uppercase;
+
 }
 
 .post-title {
@@ -98,47 +138,3 @@ a{
     font-weight: 400;
     line-height: 1.25rem;
 }
-
-
-/* .hero-post {
-    background-position: center center;
-    background-attachment: fixed;
-    min-width: 320px;
-    min-height: 293px;
-    margin: 0 auto;
-    background-size: cover;
-    color: #fff;
-    padding: 1.25em;
-    display: grid;
-    grid-template-rows: minmax(87px, 287px) 1fr max-content;
-    grid-template-areas:
-        "date"
-        "title"
-        "p";
-    gap: 8px;
-    border: 1px solid black;
-}
-
-.hero-date {
-    background-color: darkcyan;
-    grid-area: date;
-    align-self: end;
-    font-size: .75rem;
-    font-weight: 400;
-}
-
-.hero-title {
-    background: darkcyan;
-    grid-area: title;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 2rem;
-}
-
-.hero-p {
-    background: darkcyan;
-    grid-area: p;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.25em;
-} */
