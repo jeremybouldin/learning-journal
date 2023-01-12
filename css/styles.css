@@ -72,24 +72,23 @@ a{
 /* Hero Post */
 
 .hero-post {
-    /* min-width: 320px; */
     display: grid;
     background: darkolivegreen url("../images/article-image-hero.png");
     min-height: 293px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     background-size: cover;
     color: #fff;
-    padding: 1.25em;
-    grid-template-rows: minmax(87px, 1fr) max-content max-content;
+    padding: 1.5em 1.25em;
+    grid-template-rows: minmax(20px, 1fr) max-content max-content;
     grid-template-areas:
     "hero-date"
     "hero-title"
     "hero-p";
     gap: 8px;
-    border: 1px solid black;
 }
 
 .hero-date {
+    text-transform: uppercase;
     grid-area: hero-date;
     align-self: end;
     font-size: .75rem;
@@ -114,12 +113,20 @@ a{
 
 .posts {
     display: grid;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
-    padding: 2.125em 1.25em 1.7em 1.25em;
+    grid-template-columns: 374px;
     row-gap: 2.56em;
+    margin-top: 2.125em;
+    margin-bottom: 1.69em;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .post-date {
+    margin-top: 5px;
     font-size: .875rem;
     font-weight: 400;
     line-height: 1rem;
