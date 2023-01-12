@@ -36,10 +36,11 @@ ul {
 
 nav{
     width: 100%;
+    height: 59px;
     display: flex;
     align-items: center;
-    padding: 1.125em 1.5em 1.125em 1.25em;
-    justify-self: none;
+    padding: 0 1.5em 0 1.25em;
+    justify-items: center;
 }
 
 nav ul{
@@ -72,38 +73,31 @@ a{
 /* Hero Post */
 
 .hero-post {
-    display: grid;
-    background: darkolivegreen url("../images/article-image-hero.png");
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
     min-height: 293px;
-    /* margin: 0 auto; */
+    background: darkolivegreen url("../images/article-image-hero.png");
     background-size: cover;
     color: #fff;
     padding: 1.5em 1.25em;
-    grid-template-rows: minmax(20px, 1fr) max-content max-content;
-    grid-template-areas:
-    "hero-date"
-    "hero-title"
-    "hero-p";
     gap: 8px;
 }
 
 .hero-date {
+    margin-top: auto;
     text-transform: uppercase;
-    grid-area: hero-date;
-    align-self: end;
     font-size: .75rem;
     font-weight: 400;
 }
 
 .hero-title {
-    grid-area: hero-title;
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
 }
 
 .hero-blurb {
-    grid-area: hero-p;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.25em;
@@ -124,6 +118,11 @@ a{
     display: flex;
     flex-direction: column;
     gap: 9px;
+}
+
+.post-image {
+    width: 100%;
+    flex-grow: 1;
 }
 
 .post-date {
@@ -179,4 +178,52 @@ footer {
     color: #D7D7D7;
     font-weight: 400;
     line-height: .94rem;
+}
+
+@media (min-width: 1085px){
+    nav {
+        height: 100px;
+        padding: 0 3.31em;
+    }
+
+    nav,
+    .hero-post,
+    .posts {
+        padding: 0 3.31em;
+    }
+
+    .hero-post {
+        padding-top: 3.75em;
+        padding-bottom: 3.75em;
+        min-height: 488px;
+        background-size: 100%;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+    }
+
+    .hero-blurb {
+        width: 600px;
+    }
+
+    .posts {
+        gap: 3em 1.625em;
+        grid-template-columns: repeat(auto-fill, minmax(309px, 1fr));
+        margin-bottom: 2em;
+    }
+
+    .post-title {
+        margin-top: 5px;
+    }
+
+    .view-more {
+        margin-bottom: 3.18em;
+    }
 }
