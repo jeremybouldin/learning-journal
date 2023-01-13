@@ -26,6 +26,7 @@ ul {
 .logo {
     align-self: center;
     margin-right: 3px;
+    width: 1.5em;
 }
 
 .logo-text {
@@ -53,10 +54,6 @@ nav ul{
     font-weight: 600;
 }
 
-.home {
-    border-bottom: 2px solid black;
-}
-
 a{
     text-decoration: none;
     color: #090909;
@@ -75,7 +72,7 @@ a{
 .hero-post {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     min-height: 293px;
     background: darkolivegreen url("../images/article-image-hero.png");
     background-size: cover;
@@ -183,7 +180,19 @@ footer {
 @media (min-width: 1085px){
     nav {
         height: 100px;
-        padding: 0 3.31em;
+    }
+
+    .logo {
+        width: 2.125em;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    nav ul {
+        font-size: 1em;
+        line-height: 1.25em;
     }
 
     nav,
