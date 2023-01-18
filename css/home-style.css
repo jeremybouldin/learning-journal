@@ -21,8 +21,8 @@ ul {
     margin: 0;
 }
 
-
 /* Navbar */
+
 .logo {
     align-self: center;
     margin-right: 3px;
@@ -153,6 +153,8 @@ a{
     margin-bottom: 2.69em;
 }
 
+/* Footer */
+
 footer {
     display:flex;
     flex-direction: column;
@@ -177,8 +179,15 @@ footer {
     line-height: .94rem;
 }
 
+/* Media Query */
+
 @media (min-width: 1085px){
+    .wrapper {
+        background-color: #fafafa;
+    }
+
     nav {
+        background-color: #FFF;
         height: 5.19rem;
     }
 

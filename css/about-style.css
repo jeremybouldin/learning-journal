@@ -21,8 +21,8 @@ ul {
     margin: 0;
 }
 
-/* Navbar */
 
+/* Navbar */
 .logo {
     align-self: center;
     margin-right: 3px;
@@ -67,46 +67,44 @@ a{
     justify-items: center;
 }
 
-/* Article */
+/* Intro */
+
+.intro {
+    padding: 1.625em 1.25em 0;
+
+}
 
 .article {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 293px;
-    padding: 1.5em 1.25em;
+    padding: 0 1.25em;
 }
 
-.article-date {
-    text-transform: uppercase;
-    font-size: .75rem;
-    font-weight: 400;
+.profile-image {
+    /* margin-top: 1rem; */
+    width: 11.375rem;
+    height: 11.375rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.article-title {
-    margin-top: 1rem;
+.intro-title {
+    margin-top: 1.625rem;
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
 }
 
-.article-blurb {
+#intro-blurb {
     margin-top: 1rem;
+    margin-bottom: 3.125rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.25em;
 }
 
-.article-image {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    height: 191px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url('../images/article-image-hero.png');
-    border-radius: 3px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    background-size: cover;
-}
 
 .article p {
     margin-bottom: 1rem;
@@ -118,7 +116,7 @@ a{
 /* Recent Posts */
 
 .recent-posts {
-    margin-top: 0.625rem;
+    margin-top: 1.875rem;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -193,10 +191,9 @@ footer {
 
 /* Media Query */
 
-
 @media (min-width: 1085px){
     .wrapper {
-        background-color: #FAFAFA;
+        background-color: #fafafa;
     }
 
     nav {
@@ -218,42 +215,42 @@ footer {
     }
 
     nav,
-    .article,
     .posts {
         padding: 0 3.31em;
     }
 
-    .article {
-        margin-top: 4.8rem;
-        margin-bottom: 3.56rem;
+    .intro {
+        display: grid;
+        grid-template-columns: 11.375rem auto;
+        grid-template-rows: auto auto;
+        gap: 0.625rem 2rem;
+        grid-template-areas: 
+            "photo title"
+            "photo blurb";
+        padding: 5.6875rem 3.3125rem 4.1rem;
         max-width: 1200px;
     }
 
-    .article-image {
-        margin: 2rem 0;
-        width: 100%;
-        height: 483px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url('../images/article-image-hero.png');
-    border-radius: 3px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-        background-size: cover;
+    .profile-image {
+        grid-area: photo;
     }
 
-    .article-date,
-    .article-title,
-    .article-blurb,
-    .article p {
-        padding: 0 4.25rem;
-    }
-
-    .article-date {
-        font-size: 1rem;
-        line-height: 1.25rem;
-    }
-
-    .article-title {
+    .intro-title {
         font-size: 2.25rem;
-        line-height: 2.44rem;
+        line-height: 2.4rem;
+        grid-area: title;
+        margin: 0;
+        align-self: end;
+    }
+
+    #intro-blurb {
+        grid-area: blurb;
+        margin: 0;
+    }
+
+    .article {
+        padding: 0 7.5625rem;
+        max-width: 1400px;
     }
 
     .article strong {
@@ -279,7 +276,7 @@ footer {
     }
 
     .recent-posts {
-        margin: 0;
+        margin-top: 2.1875rem;
         font-size: 1.5rem;
         line-height: 1.5rem;
         
