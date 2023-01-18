@@ -126,7 +126,7 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
 
 .posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(374px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
     padding: 0 1.25em;
     gap: 2.56em;
     margin-top: 1.69rem;
@@ -235,13 +235,6 @@ footer {
         padding: 0 4.25rem;
     }
 
-    .hero-post {
-        padding-top: 3.75em;
-        padding-bottom: 3.75em;
-        min-height: 488px;
-        background-size: 100%;
-    }
-
     .article-date {
         font-size: 1rem;
         line-height: 1.25rem;
@@ -265,8 +258,8 @@ footer {
     }
 
     .posts {
-        gap: 3em 1.625em;
-        grid-template-columns: repeat(auto-fill, minmax(309px, 1fr));
+        gap: 3rem 1.625rem;
+        grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
         margin-bottom: 2em;
     }
 
